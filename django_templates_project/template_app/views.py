@@ -4,5 +4,6 @@ from django.urls import reverse
 
 
 def index(request):
-    return HttpResponse("Main Page")
+    return render(request, "template_app/first.html")
+    #return HttpResponse("Main Page")
 
