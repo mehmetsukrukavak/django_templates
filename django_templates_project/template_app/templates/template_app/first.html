@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Main Page</title>
-</head>
-<body>
-  <h1>Main Page</h1>
-  <h2>Application is running.....</h2>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Main Test</h1>
+<img src="{% static 'template_app/72-Seasons-Metallica-Yeni-Album.jpg' %}" alt="metallica">
+{% endblock %}
