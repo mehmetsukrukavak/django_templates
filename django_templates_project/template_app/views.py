@@ -13,7 +13,8 @@ def weather_view(request):
         "ankara": "26",
         "paris": [3, 15, 16, 5],
         "rome": {"morning": 10, "evening": 15},
-        "user_premium": True
+        "user_premium": True,
+        "test": "Test Test test tEst"
     }
     return render(request, "template_app/weather.html", context=weather_dict)
 
