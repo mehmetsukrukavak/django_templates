@@ -10,22 +10,27 @@
   <h2>İstanbul : {{istanbul}}</h2>
   <br>
   <h2>Ankara : {{ankara}}</h2>
-  
   <br>
-  <h2>Rome : </h2>
-  <ul>
-    {% for key,value in rome.items %}
-      <li><h2>{{key}} : {{value}}</h2></li>
-    {% endfor %}
-  </ul>
-  <br>
-  <h2>Paris : </h2>
-  <ul>
-     {% for item in paris %}
-      <li><h2>{{item}}</h2></li>
-      {% endfor %}
-  </ul>
+  {% if user_premium %}
+      <h2>Rome : </h2>
+      <ul>
+        {% for key,value in rome.items %}
+          <li><h2>{{key}} : {{value}}</h2></li>
+        {% endfor %}
+      </ul>
+      <br>
+      <h2>Paris : </h2>
+      <ul>
+          {% for item in paris %}
+              {% if item < 6 %}
+                    <li><h2>Too Cold</h2></li>
+              {% else %}
+                    <li><h2>{{item}}</h2></li>
+              {% endif %}
+          {% endfor %}
 
+      </ul>
+  {% endif %}
 
  
 </body>
